@@ -1,2 +1,2 @@
-# le000255.gihub.io
+# le000255.github.io
 This is my pages' repository.
