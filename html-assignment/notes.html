@@ -5,49 +5,50 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
   <title>HTML Assignment | My Notes</title>
 </head>
 
 <body>
-  <header>
-    <h1>My Notes</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">About me</a></li>
-        <li><a href="notes.html">My notes</a></li>
+  <header >
+    <nav id="navbar" class="sticky">
+      <ul id="navbar-linklist">
+        <li><a  href="index.html">ABOUT ME</a></li>
+        <li><a class="active" href="notes.html">MY NOTES</a></li>
       </ul>
     </nav>
+    <h1 class="site-title">My Notes</h1>
   </header>
 
-  <main>
+  <main class="container">
     <article>
       <h2>My top five HTML tags</h2>
       <dl>
-        <dt><code>header</code> tag:</dt>
+        <dt><code class="pretty-tag">header</code> tag:</dt>
         <dd>
           used as a container of a page's title or a group of navigation links
         </dd>
 
-        <dt><code>h1</code> tag:</dt>
+        <dt><code class="pretty-tag">h1</code> tag:</dt>
         <dd>defines the title of the page</dd>
 
-        <dt><code>main</code> tag:</dt>
+        <dt><code class="pretty-tag">main</code> tag:</dt>
         <dd>used as a container of the page's primary content</dd>
 
-        <dt><code>article</code> tag:</dt>
+        <dt><code class="pretty-tag">article</code> tag:</dt>
         <dd>
           wraps around the whole body of reading texts (e.g., blog posts, news
           articles)
         </dd>
 
-        <dt><code>img</code> tag:</dt>
+        <dt><code class="pretty-tag">img</code> tag:</dt>
         <dd>used to display images in a document</dd>
       </dl>
     </article>
   </main>
 
   <footer>
-    <small>&copy; 2023 by Eddie Le</small>
+    <small id="copyrights">&copy; 2023 by Eddie Le</small>
   </footer>
 </body>
 
