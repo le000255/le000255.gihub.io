@@ -264,6 +264,11 @@ form#contact .contact-form-field .select {
   display: inline;
 }
 
+form#contact .contact-form-field .select input{
+  margin-left: 0;
+  margin-right: 8px;
+}
+
 form#contact .contact-form-btn button {
   cursor: pointer;
   padding: var(--pd-sm);
