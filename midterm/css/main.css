@@ -107,6 +107,7 @@ textarea {
 }
 
 .page-header,
+.page-header-title,
 .page-header-nav,
 .page-content,
 .page-contact-form,
@@ -165,16 +166,15 @@ textarea {
 .page-header .page-header-nav li a::after {
   content: "";
   position: absolute;
-  height: 30px;
+  height: 70%;
   background-color: var(--clr-secondary);
-  bottom: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-40%);
+  transform: translateX(-50%) translateY(-50%);
   width: 0%;
   z-index: -1;
 }
 
-.page-header .page-header-nav li a,
 .page-header .page-header-nav li a::after {
   transition: 200ms;
 }
@@ -194,17 +194,13 @@ textarea {
 
 @media only screen and (max-width: 900px) {
   .page-header h1 {
-    top: 10%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .page-header .page-header-nav li {
     width: calc(33% - 0.5em);
   }
-   .page-header .page-header-nav li a::after{
-    max-height: 25px;
-    height: calc(100% - 0.5em);
-  }
-
 }
 
 /* end: styling navigation bar */
@@ -223,7 +219,6 @@ article.page-content #content-img {
   article.page-content #content-img {
     max-width: 250px;
     width: calc(100% - 10em);
-    float: left;
     margin: 0 var(--mg-md) var(--mg-sm) 0;
   }
 
