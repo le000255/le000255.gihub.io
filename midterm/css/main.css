@@ -1,0 +1,298 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* font values */
+  --font-primary: Arial, Helvetica, sans-serif;
+  --clr-primary: #aad4cf;
+  --clr-secondary: #d4e9e7;
+  --clr-text-primary: #0e0e0e;
+  --clr-text-secondary: #fefefe;
+  --fs-h1: 4rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 1.75rem;
+  --fs-h4: 1.25rem;
+  --fs-nav: 1.25rem;
+
+  /* padding & margin */
+  --pd-xl: 2em;
+  --pd-md: 1.5em;
+  --pd-sm: 1em;
+  --pd-xs: .75em;
+  --pd-xs-1: .5em;
+  --pd-xs-2: .25em;
+  --mg-xl: 2em;
+  --mg-md: 1.5em;
+  --mg-sm: 1em;
+  --mg-xs: .75em;
+  --mg-xs-1: .5em;
+  --mg-xs-2: .25em;
+  /* wrapper width */
+  --max-width: 1000px;
+}
+
+@media only screen and (max-width: 900px) {
+  :root {
+    --fs-h1: 3.2rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1rem;
+    --fs-nav: 1.05rem;
+  }
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.4;
+  background-color: var(--clr-secondary);
+  color: var(--clr-text-primary);
+  padding: 0;
+  margin: 0;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+h2,
+h3 {
+  margin-top: var(--mg-xs-2);
+  margin-bottom: var(--mg-xs-2);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: normal;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+textarea {
+  resize: none;
+  min-height: 100px;
+  overflow: auto;
+}
+
+
+.wrapper {
+  background: var(--clr-primary);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.padded-wrapper {
+  padding: 0 var(--pd-xs);
+}
+
+.page-header,
+.page-header-nav,
+.page-content,
+.page-contact-form,
+.page-footer {
+  position: relative;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+/* -------------- styling header -------------- */
+
+.page-header img.page-header-img {
+  width: 100%;
+}
+
+.page-header h1 {
+  color: var(--clr-text-secondary);
+  position: absolute;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+}
+
+
+/* styling navigation bar */
+.page-header .page-header-nav {
+  padding: 0;
+  margin: 0;
+  margin-bottom: var(--mg-md);
+}
+
+.page-header .page-header-nav li {
+  list-style: none;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+
+.page-header .page-header-nav li a {
+  padding: var(--pd-xs) var(--pd-sm);
+  text-decoration: none;
+  color: var(--clr-text-primary);
+  font-size: var(--fs-nav);
+  position: relative;
+}
+
+.page-header .page-header-nav li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: var(--clr-text-secondary);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+}
+
+.page-header .page-header-nav li a,
+.page-header .page-header-nav li a::after {
+  transition: 200ms;
+}
+
+.page-header .page-header-nav li a:hover {
+  color: var(--clr-text-secondary);
+}
+
+.page-header .page-header-nav li a:hover::after {
+  width: 100%;
+}
+
+.page-header-nav li:nth-child(2) {
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 1px;
+  border-right: 1px;
+  border-color: var(--clr-text-primary);
+  border-style: solid;
+}
+
+@media only screen and (max-width: 900px) {
+  .page-header h1 {
+    top: 10%;
+  }
+
+  .page-header .page-header-nav li {
+    width: calc(33% - 0.5em);
+  }
+
+}
+
+/* end: styling navigation bar */
+
+/* ------------ end: styling header ----------- */
+
+
+/* ----------- styling main content ----------- */
+article.page-content #content-img {
+  max-width: 290px;
+  float: left;
+  margin: 0 var(--mg-md) var(--mg-sm) 0;
+}
+
+@media only screen and (max-width: 900px) {
+  article.page-content #content-img {
+    max-width: 250px;
+    width: calc(100% - 10em);
+    float: left;
+    margin: 0 var(--mg-md) var(--mg-sm) 0;
+  }
+
+}
+article.page-content .page-content-facts {
+  margin-bottom: var(--mg-xl);
+}
+
+article.page-content .page-content-facts ul {
+  padding-left: var(--pd-sm);
+}
+
+
+
+/* --------- end: styling main content -------- */
+
+
+/* ----------- styling contact form ----------- */
+form#contact {
+  border: 1px solid var(--clr-text-primary);
+  padding: var(--pd-sm);
+}
+
+form#contact .contact-form-field {
+  margin-bottom: var(--mg-sm);
+}
+
+form#contact .contact-form-field>* {
+  width: 100%;
+  display: block;
+}
+
+form#contact .contact-form-field label {
+  margin-bottom: var(--mg-xs-2);
+}
+
+form#contact .contact-form-field input,
+form#contact .contact-form-field textarea {
+  padding: var(--pd-xs-1);
+}
+
+form#contact .contact-form-field .select {
+  display: inline;
+}
+
+form#contact .contact-form-btn button {
+  cursor: pointer;
+  padding: var(--pd-sm);
+  border: 1px solid var(--clr-text-primary);
+  background-color: var(--clr-primary);
+  transition: 70ms;
+}
+
+form#contact .contact-form-btn button:hover {
+  border-color: var(--clr-text-secondary);
+  background-color: var(--clr-secondary);
+}
+
+/* --------- end: styling contact form -------- */
+
+/* -------------- styling footer -------------- */
+footer.page-footer {
+  min-height: 10vh;
+}
+
+footer.page-footer small {
+  padding-right: var(--pd-xs);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+/* ------------ end: styling footer ----------- */
