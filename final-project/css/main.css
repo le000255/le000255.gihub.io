@@ -516,7 +516,7 @@ footer p {
   /* services section */
   section#services .services-grid {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(1fr, 30vh));
     gap: var(--gap);
 
   }
@@ -570,8 +570,7 @@ footer p {
 
   .john {
     grid-column: 1 / -1;
-    grid-template-areas:
-      "john-hs john-ab";
+    grid-template-areas: "john-hs john-ab";
     grid-row: 1/2;
   }
 
@@ -585,8 +584,7 @@ footer p {
 
   .bob {
     grid-column: 1/-1;
-    grid-template-areas:
-      "bob-ab bob-hs";
+    grid-template-areas: "bob-ab bob-hs";
   }
 
   img#bob-hs {
@@ -601,8 +599,7 @@ footer p {
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "form map"
+    grid-template-areas: "form map"
       "op-hrs op-hrs";
     gap: var(--gap);
   }
