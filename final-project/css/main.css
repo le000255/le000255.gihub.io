@@ -245,6 +245,7 @@ section#hero {
   margin: 0 auto;
 }
 
+/* button style */
 .button-link {
   display: inline-block;
   display: flex;
@@ -262,7 +263,15 @@ section#hero {
   border: none;
   cursor: pointer;
   width: fit-content;
+  transition: linear 100ms;
+}
 
+.button-link:hover,
+.button-link:focus,
+#vision .button-link:hover,
+#vions .button-link:focus {
+  color: var(--txt-cl-secondary-1);
+  background-color: var(--cl-primary);
 }
 
 .button-arrow {
@@ -274,6 +283,11 @@ section#hero {
   background-color: var(--cl-primary);
 }
 
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--cl-secondary-2);
+  color: var(--txt-cl-primary);
+}
 
 
 /* -------------- end: hero style ------------- */
@@ -403,6 +417,13 @@ input.btn-submit {
   border: none;
   cursor: pointer;
   background-color: var(--cl-secondary-2);
+  transition: linear 100ms;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+  color: var(--txt-cl-primary);
+  background-color: var(--txt-cl-secondary-2);
 }
 
 table.hour-table {
