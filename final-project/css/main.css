@@ -516,7 +516,7 @@ footer p {
   /* services section */
   section#services .services-grid {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, minmax(1fr, 30vh));
+    grid-template-rows: repeat(2, minmax(30vh, auto));
     gap: var(--gap);
 
   }
